@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>farmer</title>
+</head>
+<body>
+<div th:fragment="expert_navbar">
+				
+					<nav class="navbar navbar-expand-lg navbar-light main-nav">
+					  <div class="collapse navbar-collapse main-navbar" id="navbarNavDropdown" align="center">
+					    <ul class="navbar-nav">
+					      <li class="nav-item active">
+					        <a class="nav-link" href="/farmerportal/main_dashboard">HOME <span class="sr-only"></span></a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="/farmerportal/expert_dashboard">DASHBOARD</a>
+					      </li>
+					       <li class="nav-item">
+							  <div class="dropdown">
+								  <p class="dropbtn">MY ADMINS</p>
+								  <div class="dropdown-content">
+								   <a class="nav-link" href="/farmerportal/all_questions_expert">All Questions</a>
+							       <a class="nav-link" href="/farmerportal/all_notifications_expert">All Notifications</a>
+								  </div>
+								</div>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="/admin/change_password_expert">CHANGE PASSWORD</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="/farmerportal/main_dashboard">LOG OUT</a>
+					      </li>
+					      
+					    </ul>
+					    </div>
+					</nav>
+			
+			
+			</div>
+		
+</body>
+</html>

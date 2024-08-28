@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org"
+	xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>all questions</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<div th:replace="main_navbar :: main_navbar"></div> 
+
+	<div th:replace="expert_navbar :: expert_navbar"></div>
+	<div class="container">
+			<div class="col-md-12">
+				<div class="row">
+	
+<p>all questions</p>
+
+<table class="table table-bordered table-striped">
+			
+				<thead>
+					<tr>
+						
+						<th>Sr No.</th>
+						<th>Questions</th>
+						<th>Add Answer</th>
+						
+						
+					</tr>
+				</thead>
+				<tbody>
+					 <tr th:each="question : ${listOfQuestions}">
+						<td th:text="${question.id}" />
+						<td th:text="${question.question}" />
+						<td th:text="${question.answer}" />
+						<td >
+						<a th:href="@{/farmerportal/add_answer/{farmerName}(farmerName=${question.farmerName})}">add answer</a>
+						</td>
+						
+						
+						
+					</tr>
+				</tbody>
+				
+			</table>
+	</div>
+			</div>
+		</div>
+</body>
+</html>

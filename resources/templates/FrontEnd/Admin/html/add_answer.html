@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html  xmlns:th="https://thymeleaf.org"
+	xmlns:layout="https://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>add answer</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<div th:replace="main_navbar :: main_navbar"></div> 
+
+<div th:replace="expert_navbar :: expert_navbar"></div>
+<div th:if=${success_message}>
+<div class="alert alert-success" role="alert" th:text="${success_message}">
+</div>
+</div>
+
+
+
+<div class="container">
+			<div class="col-md-12">
+				<div class="row">
+						
+						
+						
+		
+				
+					<div class="login">
+					<h3>Add Answer</h3>
+						<form th:action="@{/farmerportal}" th:object="${object}" method="post" id="add_answer"  enctype="multipart/form-data">
+							<div class="row d-flex justify-content-center">
+							  <div class="col-md-6">
+					        	<div class="card px-5 py-5" id="form1">
+							      <div class="form-data">
+							        <div class="row">
+							      	  <div class="col-md-12">
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">Question</label>
+									   <p th:text="${object.getQuestion()}"></p>
+									  </div>
+									  </div>
+									    <div class="col-md-12">
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">Expert Name</label>
+									    <input type="text"  class="form-control" name="expertName" id="name">
+									  </div>
+									  </div>
+									 
+									  
+									  <div class="col-md-12">
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">Answer</label>
+									    
+									    <textarea name="answer" form="add_answer"  rows="4" cols="50">Type here.....</textarea>
+									    
+									  </div>
+									  </div>
+									 
+									 <div class="form-check">
+									    
+									  </div>
+									  <div class="col-mb-4"> 
+									  <div class="form-group">
+				                    	<button class="btn btn-dark w-100">Publish</button> 
+				                    	</div>
+				                      </div>
+									 
+				                      
+							      </div>
+							      </div>
+								 </div>
+						        </div>
+					          </div>
+						  
+						</form>
+						        </div>
+					          </div></div>
+					         
+			
+		
+		
+				
+				</div>
+			
+		
+
+
+</body>
+</html>
